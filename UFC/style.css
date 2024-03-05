@@ -1,0 +1,25 @@
+ *{
+     margin: 0;
+     padding: 0;
+   }
+   body{
+    background: rgb(221, 195, 195);
+   }
+   .one{
+    margin: 5px;
+    background-color: rgb(122, 122, 223);
+    padding: 8px;
+    height:auto ;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 5px 5px;
+   }
+   .two{
+    margin: 5px;
+    background-color: rgb(122, 122, 223);
+    padding: 8px;
+    height: auto;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 5px 5px;
+   }

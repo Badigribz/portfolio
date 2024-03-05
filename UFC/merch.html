@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="shortcut icon" href="data:image/jpeg;base64,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"type="image/x-icon">
+</head>
+<body class="bg-red-400 h-full w-full">
+    <nav class="bg-gray-900">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+              <a href="index.html" class="hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><img class="h-8 w-auto" src="https://ih1.redbubble.net/image.2146194673.8702/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="Your Company"></a>
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="rankings.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Rankings</a>
+                <a href="merch.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Merchandise</a>
+              </div>
+            </div>
+          </div>
+          
+    
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="rankings.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Rankings</a>
+          <a href="merch.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Merchandise</a>
+        </div>
+      </div>
+    </nav>
+    <div class=" grid place-content-center">
+  <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black-900 md:text-5xl lg:text-6xl"> UFC Merchandise </h1>
+   </div>
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Products</h2>
+  
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="https://m.media-amazon.com/images/I/71gJCwH+EoL._AC_SX679_.jpg" alt="Neck Tee, short-sleeved" class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">UFC short-sleeved neck Tee</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">$10</p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="https://m.media-amazon.com/images/I/61Adqlj1VoS._AC_SL1500_.jpg" alt="Walk out jersey" class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Authentic UFC walkout jersey</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">$45</p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91HiY6TKrvL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png" alt="O'Malley Merch" class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Sean O'Malley's Favourite </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">$20</p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="https://m.media-amazon.com/images/I/81iP9SIDXCL._AC_SL1500_.jpg" alt="UFC gloves" class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">UFC authentic gloves</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">$50</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

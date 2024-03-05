@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Task</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+html{
+    font-size: 20px;
+    font-style: 'Montserrat' , sans-sarif;
+}
+a{
+    text-decoration: none;
+}
+
+p{
+    color: black;
+    font-style: 1.4rem;
+    margin: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Start of main section*/
+#main {
+    min-height: 100vh; /* Ensure section covers the entire viewport height */
+    display: flex;
+    padding: 20px;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: center;
+}
+
+  /*This is the dark cover that is on top of the cover photo of the webpage */
+#main::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#main .main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#main h1{
+    display: block;
+    margin: 0;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+#main h1:nth-child(1){
+    animation-delay: 1s;
+}
+#main h1:nth-child(2){
+    animation-delay: 2s;
+}
+#main h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#main h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#main h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#main h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#main h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+  /*The below is for the button cta*/
+#main .cta{
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 30px;
+    transition: .3s ease;
+    transition-property: animation-delay 1s;
+}
+#main .cta:hover{
+    color: white;
+    background-color: crimson;
+}
+
+  /*In Keyframes,animation will gradually change from current style to a new style at certain times */
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name {
+    100%{
+        color: crimson;
+        font-weight: 500px;
+    }
+}
+
+/*end of main section*/
+
+
+/*Beginning of Services section*/
+
+  /*Below deals with the heading "SERVICES"*/
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+  /*Below deals with the color span of services section*/
+.section-title span{
+    color: crimson;
+}
+
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+  /*Below was dealing with the heading*/
+#services .service-top{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#services .service-item{
+    text-align: left;
+}
+
+  /*Below forms the 'tint' on the services-item*/
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .8;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#services .service-item:nth-child(1){
+    background-image: url(../img/FB_IMG_1508768280788.jpg);
+    margin: 30px;
+}
+
+#services .service-item:nth-child(2){
+    background-image: url(../img/FB_IMG_1508768280788.jpg);
+    margin: 30px;
+}
+
+#services .service-item:nth-child(3){
+    background-image: url(../img/FB_IMG_1508768280788.jpg);
+    margin: 30px;
+}
+
+#services .service-item:nth-child(4){
+    background-image: url(../img/FB_IMG_1508768280788.jpg);
+    margin: 30px;
+}
+
+/*End of services section*/
+
+/*Start of Projects section*/
+#projects .projects{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projects .project-top{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.project-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#projects .project-top h1{
+    margin-bottom: 50px;
+}
+
+.project-title span{
+    color: crimson;
+}
+
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /*background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);*/
+    color: white;
+}
+
+#projects .project-info h2{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#projects .project-info p{
+    color: white;
+}
+
+#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+}
+
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    opacity: .7;*/
+}
+
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+
+/*End of Projects section*/
+
+
+/*Start of About Section*/
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col-right{
+    width: 100%;
+}
+
+#about .col-right h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p{
+    margin-bottom: 20px;
+}
+
+#about .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-bottom: 50px;
+    transition: .3s ease;
+    transition-property: animation-delay 1s;
+}
+
+#about .cta:hover{
+    color: white;
+    background-color: crimson;
+}
+
+/*End of About Section*/
+
+/*Start of Contacts section*/
+#contacts .contacts{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.section-title span{
+    color: crimson;
+}
+
+#contacts .contact-items{
+    width: 400px;
+}
+
+
+#contacts .contact-item{
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+}
+
+#contacts .contact-item:hover{
+    box-shadow: 0px 0px 5px #0000002c;
+}
+
+#contacts .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contacts .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contacts .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+/*End of Contacts Section*/
+
+
+/*Footer Section*/
+#footer{
+    background-image: linear-gradient(30deg, #29323c 50%, #485563 50%);
+}
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.brand span{
+    color: crimson;
+}
+
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+}
+.project-info a{
+    color: black;
+}
+.project-info a:hover{
+    color: crimson;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: flex-start;
+}
+.avatar {
+    width: 200px; 
+    height: 250px;
+    border-radius: 50%;
+}
+
+.card {
+  --blur: 16px;
+  --size: clamp(300px, 50vmin, 600px);
+  width: var(--size);
+  position: relative;
+  overflow: hidden;
+  color: #000;
+  transform: translateZ(0);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
+  transition: transform 0.2s;
+}
+
+.card__footer {
+  padding: 0 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  display: grid;
+  gap: 0.5ch;
+  background: hsl(0 0% 100% / 0.5);
+  backdrop-filter: blur(var(--blur));
+  height: 30%;
+  align-content: center;
+}
+
+.card__action {
+  position: absolute;
+  aspect-ratio: 1;
+  width: calc(var(--size) * 0.15);
+  bottom: 30%;
+  right: 1.5rem;
+  transform: translateY(50%)
+    translateY(
+      calc(
+        (var(--size) * 0.4)
+      )
+    )
+    translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+  background: purple;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  background: hsl(0 0% 100% / 0.5);
+/*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
+  transition: transform 0.2s;
+}
+
+.card__footer span:nth-of-type(1) {
+  font-size: calc(var(--size) * 0.065);
+}
+
+.card__footer span:nth-of-type(2) {
+  font-size: calc(var(--size) * 0.035);
+}
+
+.card:is(:hover, :focus-visible) {
+  --hover: 1;
+}
+
+/*End of Footer section*/
+    </style>
+</head>
+<body>
+        <!-- Start of main section -->
+        <section id="main">
+            <div class="main container">
+                <div class="flex-container">
+                    <div>
+                        <h1>Welcome to my portfolio,<span> </span></h1>
+                        <h1>My name is <span> </span></h1>
+                        <h1>Badi <span> </span></h1><br><br>
+                     
+                        <a href="#services" type="button" class="cta">Services</a>
+                        <a href="#about" type="button" class="cta">About</a>
+                        <a href="#projects" type="button" class="cta">Projects Done</a>
+                        <a href="#contacts" type="button" class="cta">Contacts</a>
+                    </div>
+                    <div>
+                        <img src="/images/img1.jpg" alt="Avatar" class="avatar">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End of main section -->
+    
+        <!--Services section -->
+        <section id="services">
+            <!--(div.services.container) is a shortcut used for the line below-->
+            <div class="services container">
+                <div class="service-top">
+                    <h1 class="section-title">Serv<span>i</span>ces</h1>
+                    <br>
+                    <h3> System Integration:</h3>
+                     <p> Bringing together software and hardware seamlessly is my forte. I specialize in system integration, ensuring that all components work harmoniously. This includes connecting databases to web applications, integrating sensors with microcontrollers, and ensuring smooth communication between various parts of a larger system.</p>
+                
+
+                     <br>
+
+                     <h3>Web Design:</h3>
+                     <p>I specialize in developing robust and user-friendly web applications from concept to deployment. Whether you're looking for a dynamic e-commerce platform, a responsive business website, or a custom web solution, I've got you covered. My expertise includes front-end development with modern frameworks like React and Vue.js, as well as back-end implementation using Node.js and Django.</p>
+                
+                      <br>
+                   
+                    <p>Let's Collaborate:
+                        Whether you have a specific project in mind or you're exploring possibilities, I'm here to collaborate and bring your ideas to fruition. Let's create innovative solutions that seamlessly blend software and hardware to meet your unique needs.
+                        
+                        Feel free to contact me to discuss how I can contribute to your next project or address your technology challenges.</p>
+                </div>
+              
+            </div>
+        </section>
+        <!--End of services section -->
+    
+        <!--Start of Projects section-->
+        <section id="projects">
+            <div class="projects container">
+                <div class="project-top">
+                    <h1 class="project-title" id="proj">Recent <span>Works</span></h1>
+                </div>
+                <div class="all-projects">
+                    <div class="project-item">
+                        <div class="project-info">
+                            <a href="/Form/Form.html" class="card">
+                                <img src="images/img2.png" alt="project form layout" class="card__img">
+                                <span class="card__footer">
+                                  <span>Project 1</span>
+                                  <span>A simple form layout.</span>
+                                </span>
+                              </a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-info">
+                            <a href="/UFC/index.html" class="card">
+                                <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/inline/s3/2023-10/101623-ufc-294-makhachev-volkanovski-GettyImages-1465190673%20%281%29.jpg?itok=hHFSym3X" alt="project ufc blog" class="card__img">
+                                <span class="card__footer">
+                                  <span>Project 2</span>
+                                  <span>A simple Blog website.</span>
+                                </span>
+                              </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Badigribz/arduino" class="card">
+                            <img src="/images/img3.jpg" alt="project ufc blog" class="card__img">
+                            <span class="card__footer">
+                              <span>Project 3</span>
+                              <span>Arduino based .</span>
+                            </span>
+                          </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End of Projects section-->
+    
+        <!--Start of About Section-->
+        <section id="about">
+            <div class="about container">
+                <div class="col-right">
+                    <h2 class="section-title">About <span>me</span></h2>
+                    <h3>Software Developer /Electrical Engineer</h3>
+                    <p>Hello there! 👋 I'm Badi Gribani, a passionate individual with a knack for both software development and electrical engineering. I thrive on the exciting intersection of code and circuits, constantly seeking ways to bridge the digital and physical worlds.
+
+                        As a full-stack developer, I love crafting intuitive and efficient web applications from front to back. Whether it's designing a sleek user interface or optimizing server performance, I enjoy the challenge of creating seamless digital experiences.
+                        
+                        On the electrical engineering side, I delve into the world of circuits and systems, finding joy in solving complex problems and bringing ideas to life. From designing circuit boards to working with embedded systems, I find fulfillment in turning concepts into tangible, functional solutions.
+                        
+                        My journey in technology has been a dynamic blend of creativity and logical thinking. With a keen eye for detail and a passion for innovation, I am committed to pushing the boundaries of what's possible in both the software and hardware realms.
+                        
+                        Outside of the tech realm, you can find me exploring the intersection of technology and art, or perhaps immersed in a DIY electronics project. I believe in the power of continuous learning and collaboration, and I'm always eager to connect with like-minded individuals who share a fascination for the limitless possibilities that technology brings.
+                        
+                        Let's build, innovate, and electrify the future together! 💻⚡️</p>
+                </div>
+            </div>
+        </section>
+        <!--End of About Section-->
+    
+        <!--Start of Contacts Sexction-->
+        <section id="contacts">
+            <div class="contacts container">
+                <div>
+                    <h1 class="section-title">Contact <span>Info</span></h1>
+                </div>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="icon">
+                            <img src="https://img.icons8.com/bubbles/50/000000/apple-phone.png" alt="">
+                        </div>
+                        <div class="contact-info">
+                            <h1>Phone</h1>
+                            <h2>+254 705 656 278</h2>
+                            <h2>+254 707 381 528</h2>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <img src="https://img.icons8.com/emoji/48/000000/e-mail.png" alt="">
+                        </div>
+                        <div class="contact-info">
+                            <h1>E-mail</h1>
+                            <h2>Gribzbadi@gmail.com</h2>
+                            <h2>Badi@students.uonbi.ac.ke</h2>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <img src="https://img.icons8.com/ios/50/000000/order-delivered.png" alt="">
+                        </div>
+                        <div class="contact-info">
+                            <h1>Address</h1>
+                            <h2>UoN,Nairobi</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End of Contacts Section-->
+    
+        <!--Start of Footer Section-->
+        <section id="footer">
+            <div class="footer container">
+                <h2>Your Complete Web Solution</h2>
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="https://www.instagram.com">
+                            <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png" alt="">
+                        </a>
+                    </div>
+                
+                    <div class="social-item">
+                        <a href="https://www.facebook.com">
+                            <img src="https://img.icons8.com/office/16/000000/facebook-new.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Copyright &copy; 2023. All Rights Reserved</p>
+            </div>
+        </section>
+        <!--End of Footer Section-->
+</body>
+</html>
