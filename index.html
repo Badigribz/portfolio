@@ -47,6 +47,7 @@ p{
 
 /*Start of main section*/
 #main {
+    margin: 0px;
     min-height: 100vh; /* Ensure section covers the entire viewport height */
     display: flex;
     padding: 20px;
@@ -586,14 +587,16 @@ p{
 
 /* Styles for small screens (up to 768px) */
 @media only screen and (max-width: 768px) {
-  .container {
+    #main {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    background-color: black;
+    opacity: 0.7;
   }
 
   .avatar {
-    width: 150px;
-    height: 200px;
+    width: 50px;
+    height: 100px;
   }
 
   /* Add more responsive styles as needed */
@@ -601,7 +604,7 @@ p{
 
 /* Styles for medium screens (769px to 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .container {
+  #main {
     padding: 20px;
   }
 
@@ -615,7 +618,7 @@ p{
 
 /* Styles for large screens (1025px and above) */
 @media only screen and (min-width: 1025px) {
-  .container {
+  #main {
     padding: 50px;
   }
 
@@ -633,7 +636,7 @@ p{
 <body>
         <!-- Start of main section -->
         <section id="main">
-            <div class="main container">
+            <div class="main-container">
                 <div class="flex-container">
                     <div>
                         <h1>Welcome to my portfolio,<span> </span></h1>
